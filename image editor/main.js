@@ -33,6 +33,16 @@ window.onload = function () {
   imgBox.style.display = "none";
 };
 
+saturation.oninput = function () {
+  var value = ((this.value - this.min) / (this.max - this.min)) * 100;
+  this.style.background =
+    "linear-gradient(to left, #82CFD0 0%, #82CFD0 " +
+    value +
+    "%, #fff " +
+    value +
+    "%, white 100%)";
+};
+
 //make the imgbox download and reset button visible when the user uploads an image
 //make the function to upload the image too
 upload.addEventListener("change", function () {
@@ -62,12 +72,28 @@ upload.addEventListener("change", function () {
 
 let filters = document.querySelectorAll("ul li input");
 filters.forEach(function (filter) {
-  filter.addEventListener("change", function () {
-    //hide img and show canvas when the user changes the filter any time
-    //i do that coz reset make the img visible and the canvas hidden
+  //   filter.addEventListener("change", function () {
+  //hide img and show canvas when the user changes the filter any time
+  //i do that coz reset make the img visible and the canvas hidden
+  // img.style.display = "none";
+  // canvas.style.display = "block";
+  // ctx.filter = `
+  // saturate(${saturation.value}%)
+  // contrast(${contraste.value}%)
+  // brightness(${brightness.value}%)
+  // hue-rotate(${hue.value}deg)
+  // sepia(${sepia.value}%)
+  // grayscale(${greyscale.value})
+  // blur(${blur.value}px)
+  // `;
+  // console.log(filter.value);
+  //make the canvas work that ctx do that
+  // ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+  //   });
+
+  filter.addEventListener("input", function () {
     img.style.display = "none";
     canvas.style.display = "block";
-
     ctx.filter = `
     saturate(${saturation.value}%)
     contrast(${contraste.value}%)
@@ -76,15 +102,20 @@ filters.forEach(function (filter) {
     sepia(${sepia.value}%)
     grayscale(${greyscale.value})
     blur(${blur.value}px)
-
     `;
-    // console.log(filter.value);
-    //make the canvas work that ctx do that
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+    var value = ((this.value - this.min) / (this.max - this.min)) * 100;
+    this.style.background =
+      "linear-gradient(to left, #0ef302 0%, #d25304  " +
+      value +
+      "%, #fff " +
+      value +
+      "%, white 100%)";
   });
 });
 
-//reset values
+//when upload an image
 function resetValues() {
   img.style.filter = "none";
   saturation.value = 100;
@@ -94,8 +125,19 @@ function resetValues() {
   sepia.value = 0;
   greyscale.value = 0;
   blur.value = 0;
+  saturation.style.background =
+    "linear-gradient(to left, #0ef302 0%, #d25304 50%, #fff 50%, #fff 100%)";
+  contrast.style.background =
+    "linear-gradient(to left, #0ef302 0%, #d25304 50%, #fff 50%, #fff 100%)";
+  brightness.style.background =
+    "linear-gradient(to left, #0ef302 0%, #d25304 50%, #fff 50%, #fff 100%)";
+  hue.style.background = "#ffffff";
+  sepia.style.background = "#ffffff";
+  greyscale.style.background = " #ffffff";
+  blur.style.background = " #ffffff";
 }
 
+//when click on reset button
 function resetValue() {
   img.style.filter = "block";
   saturation.value = 100;
@@ -113,6 +155,16 @@ function resetValue() {
   canvas.style.display = "none";
   //   ctx.clearRect(0, 0, canvas.width, canvas.height);
   //   ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+  saturation.style.background =
+    "linear-gradient(to left, #0ef302 0%, #d25304 50%, #fff 50%, #fff 100%)";
+  contrast.style.background =
+    "linear-gradient(to left, #0ef302 0%, #d25304 50%, #fff 50%, #fff 100%)";
+  brightness.style.background =
+    "linear-gradient(to left, #0ef302 0%, #d25304 50%, #fff 50%, #fff 100%)";
+  hue.style.background = "#ffffff";
+  sepia.style.background = "#ffffff";
+  greyscale.style.background = " #ffffff";
+  blur.style.background = " #ffffff";
 }
 
 //make the download button work
