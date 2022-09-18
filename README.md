@@ -3,6 +3,6 @@
 
 this projects i made in html,css and js 
 
-##image-editor:
+## image-editor:
 this projects is to edit pic u can drop it into by filters 
 
