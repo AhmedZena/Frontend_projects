@@ -71,7 +71,7 @@ max-height: 60vh;
 display: flex;
     flex-direction: column;
     gap: 20px;
-    /* direction: rtl; */
+    direction: rtl;
 }
 
 
@@ -79,6 +79,33 @@ display: flex;
         color: #fff;
 
 }
+
+.medium {
+    background: linear-gradient(to left, #0ef302 0%, #d25304 50%, #fff 50%, #fff 100%);
+        border: solid 4px #82CFD0;
+        border-radius: 8px;
+        height: 7px;
+        width: 356px;
+        outline: none;
+        transition: background 450ms ease-in;
+        -webkit-appearance: none;
+}
+
+
+.lefty {
+    background: linear-gradient(to left, #ffffff 0%);
+border: solid 4px #82CFD0;
+    border-radius: 8px;
+    height: 7px;
+    width: 356px;
+    outline: none;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+
+}
+
+
+
 
 .filters ul li:last-child{
 flex-direction: row;
