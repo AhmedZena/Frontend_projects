@@ -36,13 +36,30 @@ let redthemee = function () {
   container[0].style.background = "rgba(255, 255, 255, 0.1)";
   image[0].src = "images/red_iphone.png ";
 
+  //increase width of red theme and obacity to 1
+  redTheme.style.width = "100px";
+  redTheme.style.opacity = "1";
+  redTheme.style.filter = "alpha(opacity=100)";
+
+  //decrease black and grey theme width and obacity too
+  blackTheme.style.width = "50px";
+  blackTheme.style.opacity = "0.5";
+  blackTheme.style.filter = "alpha(opacity=50)";
+  greyTheme.style.width = "50px";
+  greyTheme.style.opacity = "0.5";
+  greyTheme.style.filter = "alpha(opacity=50)";
+
   //chnage nav color on hover
   for (let i = 0; i < nav.length; i++) {
     nav[i].addEventListener("mouseover", function () {
       nav[i].style.color = "red";
+      nav[i].style.fontSize = "20px";
+      nav[i].style.transition = "all 1.5s";
     });
     nav[i].addEventListener("mouseout", function () {
       nav[i].style.color = "white";
+      nav[i].style.fontSize = "16px";
+      nav[i].style.transition = "all 1.5s";
     });
   }
 
@@ -50,10 +67,12 @@ let redthemee = function () {
   allProducts[0].addEventListener("mouseover", function () {
     allProducts[0].style.background = "red";
     allProducts[0].style.color = "white";
+    allProducts[0].style.transition = "all 1.5s";
   });
   allProducts[0].addEventListener("mouseout", function () {
     allProducts[0].style.background = "white";
     allProducts[0].style.color = "black";
+    allProducts[0].style.transition = "all 1.5s";
   });
 
   //add red theme to local storage
@@ -67,23 +86,42 @@ let blackthemee = function () {
   container[0].style.background = "rgba(0, 0, 0, 0.3)";
   image[0].src = "images/black_iphone.png";
 
+  //change width of black theme and opacity to 1
+  blackTheme.style.width = "100px";
+  blackTheme.style.opacity = "1";
+  blackTheme.style.filter = "alpha(opacity=100)";
+
+  //decrease red and grey theme width and opacity too
+  redTheme.style.width = "50px";
+  redTheme.style.opacity = "0.5";
+  redTheme.style.filter = "alpha(opacity=50)";
+  greyTheme.style.width = "50px";
+  greyTheme.style.opacity = "0.5";
+  greyTheme.style.filter = "alpha(opacity=50)";
+
   //change color of nav on hover
   for (let i = 0; i < nav.length; i++) {
     nav[i].addEventListener("mouseover", function () {
       nav[i].style.color = "blue";
+      nav[i].style.fontSize = "20px";
+      nav[i].style.transition = "all 1.5s";
     });
     nav[i].addEventListener("mouseout", function () {
       nav[i].style.color = "white";
+      nav[i].style.fontSize = "16px";
+      nav[i].style.transition = "all 1.5s";
     });
   }
   //change color of all products on hover
   allProducts[0].addEventListener("mouseover", function () {
     allProducts[0].style.background = "blue";
     allProducts[0].style.color = "white";
+    allProducts[0].style.transition = "all 1.5s";
   });
   allProducts[0].addEventListener("mouseout", function () {
     allProducts[0].style.background = "white";
     allProducts[0].style.color = "black";
+    allProducts[0].style.transition = "all 1.5s";
   });
 
   //add to local storage
@@ -97,23 +135,42 @@ let greythemee = function () {
   container[0].style.background = "rgba(0, 0, 0, 0.1)";
   image[0].src = "images/grey_iphone.png";
 
+  //change width of grey theme and opacity to 1
+  greyTheme.style.width = "100px";
+  greyTheme.style.opacity = "1";
+  greyTheme.style.filter = "alpha(opacity=100)";
+
+  //decrease red and black theme width and opacity too
+  redTheme.style.width = "50px";
+  redTheme.style.opacity = "0.5";
+  redTheme.style.filter = "alpha(opacity=50)";
+  blackTheme.style.width = "50px";
+  blackTheme.style.opacity = "0.5";
+  blackTheme.style.filter = "alpha(opacity=50)";
+
   //change color of nav on hover
   for (let i = 0; i < nav.length; i++) {
     nav[i].addEventListener("mouseover", function () {
-      nav[i].style.color = "grey";
+      nav[i].style.color = "black";
+      nav[i].style.fontSize = "20px";
+      nav[i].style.transition = "all 1.5s";
     });
     nav[i].addEventListener("mouseout", function () {
       nav[i].style.color = "white";
+      nav[i].style.fontSize = "16px";
+      nav[i].style.transition = "all 1.5s";
     });
   }
   //change color of all products on hover
   allProducts[0].addEventListener("mouseover", function () {
     allProducts[0].style.background = "grey";
     allProducts[0].style.color = "white";
+    allProducts[0].style.transition = "all 1.5s";
   });
   allProducts[0].addEventListener("mouseout", function () {
     allProducts[0].style.background = "white";
     allProducts[0].style.color = "black";
+    allProducts[0].style.transition = "all 1.5s";
   });
 
   //add to local storage
