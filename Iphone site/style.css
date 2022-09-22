@@ -254,11 +254,6 @@ nav ul li a:hover {
   }
 
   .container {
-    /* display: grid; */
-    /* grid-template-columns: 1fr; */
-    /* gap: 40px; */
-    /* grid-template-columns: 1fr; */
-    /* grid-template-rows: 1fr 1fr; */
     width: 100%;
   }
 
