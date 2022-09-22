@@ -2,7 +2,6 @@
 let redTheme = document.getElementById("redTheme");
 let blackTheme = document.getElementById("blackTheme");
 let greyTheme = document.getElementById("greyTheme");
-console.log(redTheme);
 
 //call container
 let container = document.getElementsByClassName("container");
@@ -15,7 +14,6 @@ let nav = document.querySelectorAll("nav ul li a");
 
 //call allProducts
 let allProducts = document.getElementsByClassName("allProducts");
-
 
 //restore theme from local stroage
 
