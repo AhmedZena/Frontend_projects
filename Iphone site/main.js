@@ -12,11 +12,10 @@ let image = document.getElementsByClassName("imagePic");
 
 //call all a inside nav
 let nav = document.querySelectorAll("nav ul li a");
-console.log(nav);
 
 //call allProducts
 let allProducts = document.getElementsByClassName("allProducts");
-console.log(allProducts);
+
 
 //restore theme from local stroage
 
