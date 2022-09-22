@@ -29,26 +29,8 @@ console.log(theme);
 console.log(imageSrc);
 console.log(containerColor);
 
-if (theme == "red") {
-  document.body.style.background =
-    " linear-gradient(to right, #000000, #c40000)";
-  container[0].style.background = "rgba(255, 255, 255, 0.1)";
-  image[0].src = "images/red_iphone.png ";
-} else if (theme == "black") {
-  document.body.style.background =
-    "linear-gradient(to right, #000000, #14000b, #1a0019, #180528, #000e39)";
-  container[0].style.background = "rgba(0, 0, 0, 0.3)";
-  image[0].src = "images/black_iphone.png";
-} else if (theme == "grey") {
-  document.body.style.background =
-    "  linear-gradient(to right, #000000, #1f1f1f, #373737, #525252, #6e6e6e, #818181, #949494, #a8a8a8, #b6b6b6, #c4c4c4, #d2d2d2, #e0e0e0)";
-  container[0].style.background = "rgba(0, 0, 0, 0.1)";
-  image[0].src = "images/grey_iphone.png";
-}
-
-//red theme
-redTheme.addEventListener("click", function () {
-  console.log("red theme");
+//function of red theme
+let redthemee = function () {
   document.body.style.background =
     " linear-gradient(to right, #000000, #c40000)";
   container[0].style.background = "rgba(255, 255, 255, 0.1)";
@@ -63,13 +45,23 @@ redTheme.addEventListener("click", function () {
       nav[i].style.color = "white";
     });
   }
+
+  //change color of all products on hover
+  allProducts[0].addEventListener("mouseover", function () {
+    allProducts[0].style.background = "red";
+    allProducts[0].style.color = "white";
+  });
+  allProducts[0].addEventListener("mouseout", function () {
+    allProducts[0].style.background = "white";
+    allProducts[0].style.color = "black";
+  });
+
   //add red theme to local storage
   localStorage.setItem("theme", "red");
-});
+};
 
-//black theme
-blackTheme.addEventListener("click", function () {
-  console.log("black theme");
+//function of black theme
+let blackthemee = function () {
   document.body.style.background =
     "linear-gradient(to right, #000000, #14000b, #1a0019, #180528, #000e39)";
   container[0].style.background = "rgba(0, 0, 0, 0.3)";
@@ -84,16 +76,22 @@ blackTheme.addEventListener("click", function () {
       nav[i].style.color = "white";
     });
   }
+  //change color of all products on hover
+  allProducts[0].addEventListener("mouseover", function () {
+    allProducts[0].style.background = "blue";
+    allProducts[0].style.color = "white";
+  });
+  allProducts[0].addEventListener("mouseout", function () {
+    allProducts[0].style.background = "white";
+    allProducts[0].style.color = "black";
+  });
+
   //add to local storage
   localStorage.setItem("theme", "black");
-  //   localStorage.setItem("body", "black");
-  //   localStorage.setItem("container", "rgba(0, 0, 0, 0.3)");
-  //   localStorage.setItem("image", "images/black_iphone.png");
-});
+};
 
-//grey theme
-greyTheme.addEventListener("click", function () {
-  console.log("grey theme");
+//function of grey theme
+let greythemee = function () {
   document.body.style.background =
     "  linear-gradient(to right, #000000, #1f1f1f, #373737, #525252, #6e6e6e, #818181, #949494, #a8a8a8, #b6b6b6, #c4c4c4, #d2d2d2, #e0e0e0)";
   container[0].style.background = "rgba(0, 0, 0, 0.1)";
@@ -108,13 +106,47 @@ greyTheme.addEventListener("click", function () {
       nav[i].style.color = "white";
     });
   }
+  //change color of all products on hover
+  allProducts[0].addEventListener("mouseover", function () {
+    allProducts[0].style.background = "grey";
+    allProducts[0].style.color = "white";
+  });
+  allProducts[0].addEventListener("mouseout", function () {
+    allProducts[0].style.background = "white";
+    allProducts[0].style.color = "black";
+  });
 
   //add to local storage
   localStorage.setItem("theme", "grey");
-  //   localStorage.setItem("body", "black");
-  //   localStorage.setItem("container", "rgba(0, 0, 0, 0.1)");
-  //   localStorage.setItem("image", "images/grey_iphone.png");
+};
+
+//red theme
+redTheme.addEventListener("click", function () {
+  console.log("red theme");
+  redthemee();
 });
+
+//black theme
+blackTheme.addEventListener("click", function () {
+  console.log("black theme");
+  blackthemee();
+});
+
+//grey theme
+greyTheme.addEventListener("click", function () {
+  console.log("grey theme");
+  greythemee();
+});
+
+//change theme on load
+
+if (theme == "red") {
+  redthemee();
+} else if (theme == "black") {
+  blackthemee();
+} else if (theme == "grey") {
+  greythemee();
+}
 
 //clear local storage
 // localStorage.clear();
