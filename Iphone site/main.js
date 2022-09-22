@@ -16,6 +16,35 @@ console.log(nav);
 
 //call allProducts
 let allProducts = document.getElementsByClassName("allProducts");
+console.log(allProducts);
+
+//restore theme from local stroage
+
+//call from local storage
+let theme = localStorage.getItem("theme");
+let imageSrc = localStorage.getItem("image");
+let containerColor = localStorage.getItem("container");
+
+console.log(theme);
+console.log(imageSrc);
+console.log(containerColor);
+
+if (theme == "red") {
+  document.body.style.background =
+    " linear-gradient(to right, #000000, #c40000)";
+  container[0].style.background = "rgba(255, 255, 255, 0.1)";
+  image[0].src = "images/red_iphone.png ";
+} else if (theme == "black") {
+  document.body.style.background =
+    "linear-gradient(to right, #000000, #14000b, #1a0019, #180528, #000e39)";
+  container[0].style.background = "rgba(0, 0, 0, 0.3)";
+  image[0].src = "images/black_iphone.png";
+} else if (theme == "grey") {
+  document.body.style.background =
+    "  linear-gradient(to right, #000000, #1f1f1f, #373737, #525252, #6e6e6e, #818181, #949494, #a8a8a8, #b6b6b6, #c4c4c4, #d2d2d2, #e0e0e0)";
+  container[0].style.background = "rgba(0, 0, 0, 0.1)";
+  image[0].src = "images/grey_iphone.png";
+}
 
 //red theme
 redTheme.addEventListener("click", function () {
@@ -34,6 +63,8 @@ redTheme.addEventListener("click", function () {
       nav[i].style.color = "white";
     });
   }
+  //add red theme to local storage
+  localStorage.setItem("theme", "red");
 });
 
 //black theme
@@ -53,6 +84,11 @@ blackTheme.addEventListener("click", function () {
       nav[i].style.color = "white";
     });
   }
+  //add to local storage
+  localStorage.setItem("theme", "black");
+  //   localStorage.setItem("body", "black");
+  //   localStorage.setItem("container", "rgba(0, 0, 0, 0.3)");
+  //   localStorage.setItem("image", "images/black_iphone.png");
 });
 
 //grey theme
@@ -72,4 +108,13 @@ greyTheme.addEventListener("click", function () {
       nav[i].style.color = "white";
     });
   }
+
+  //add to local storage
+  localStorage.setItem("theme", "grey");
+  //   localStorage.setItem("body", "black");
+  //   localStorage.setItem("container", "rgba(0, 0, 0, 0.1)");
+  //   localStorage.setItem("image", "images/grey_iphone.png");
 });
+
+//clear local storage
+// localStorage.clear();
