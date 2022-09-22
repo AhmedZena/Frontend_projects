@@ -25,10 +25,6 @@ let theme = localStorage.getItem("theme");
 let imageSrc = localStorage.getItem("image");
 let containerColor = localStorage.getItem("container");
 
-console.log(theme);
-console.log(imageSrc);
-console.log(containerColor);
-
 //function of red theme
 let redthemee = function () {
   document.body.style.background =
@@ -197,7 +193,39 @@ greyTheme.addEventListener("click", function () {
 
 //change theme on load
 
-if (theme == "red") {
+// if (theme == "red") {
+//   redthemee();
+// } else if (theme == "black") {
+//   blackthemee();
+// } else if (theme == "grey") {
+//   greythemee();
+// }
+
+//clear local storage
+// localStorage.clear();
+
+// window.onload = function () {
+//   //get theme from local storage
+//   let theme = localStorage.getItem("theme");
+//   if (theme == null) {
+//     redthemee();
+//   } else if (theme == "red") {
+//     redthemee();
+//   } else if (theme == "black") {
+//     blackthemee();
+//   } else if (theme == "grey") {
+//     greythemee();
+//   }
+
+//   //   console.log(theme);
+// };
+
+// document.addEventListener("DOMContentLoaded", function (event) {
+//get theme from local storage
+//   let theme = localStorage.getItem("theme");
+if (theme == null) {
+  redthemee();
+} else if (theme == "red") {
   redthemee();
 } else if (theme == "black") {
   blackthemee();
@@ -205,5 +233,5 @@ if (theme == "red") {
   greythemee();
 }
 
-//clear local storage
-// localStorage.clear();
+//   console.log(theme);
+// });
