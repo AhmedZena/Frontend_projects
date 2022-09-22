@@ -207,7 +207,7 @@ nav ul li a:hover {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 525px) {
   body {
     background: linear-gradient(to right, #000000, #c40000);
   }
