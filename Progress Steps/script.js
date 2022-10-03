@@ -87,10 +87,9 @@ let prevFunc = function () {
       " linear-gradient(to right,#020c1b, #001d2a, #002a2b, #00371c, #2c3f01)";
   }
 };
-// };
-next.addEventListener("click", nextFunc);
-prev.addEventListener("click", prevFunc);
 
-// window.addEventListener("load", function () {
-//   changeBackground(themes[3]);
-// });
+//add event listener when we click on next button call next function
+next.addEventListener("click", nextFunc);
+
+//add event listener when we click on prev button call prev function
+prev.addEventListener("click", prevFunc);
