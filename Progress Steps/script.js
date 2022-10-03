@@ -47,9 +47,11 @@ let nextFunc = function () {
   //change background color when we click on next button
   changeBackground(themes[currentStep]);
 
+  //increase current step to go to the next step
   currentStep++;
-  currentStep = currentStep;
-  console.log(currentStep);
+
+  //when i reach final step disable next button and change background color
+  // and disable next button coz no thing to do next
   if (currentStep == numbers.length) {
     next.style.backgroundColor = "#c3c5c7";
     prev.style.backgroundColor = "red";
@@ -57,15 +59,7 @@ let nextFunc = function () {
     //disable next button
     prev.disabled = false;
   }
-
-  // break;
 };
-// if (currentStep == numbers.length) {
-//   break;
-//   }
-// };
-
-//function of prev button
 
 let prevFunc = function () {
   next.style.backgroundColor = "#43d616";
