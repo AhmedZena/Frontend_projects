@@ -1,30 +1,14 @@
-// let themee = (document.body.style.background =
-//   "#f3f3f3 url('img_tree.png') no-repeat right top");
-
-//theme of the background
-// let theme1 =
-//   " linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12) ";
-// let theme1 = "linear-gradient(to right, #43d616, #43d616)";
-//  linear-gradient(to right, #031a3d, #002949, #003541, #003f2a, #1a4508);
-// background-image: linear-gradient(to right, #07285a, #004577, #005f74, #007551, #378517);
+//themes of the background
 let theme1 =
   " linear-gradient(to right, #031a3d, #002949, #003541, #003f2a, #1a4508)";
-
 let theme2 =
   " linear-gradient(to right, #07285a, #004577, #005f74, #007551, #378517)";
-
-// background-image: linear-gradient(to right, #2b456d, #005c85, #00727f, #00845b, #408f1f);
-// background-image: linear-gradient(to right, #34527f, #006f9d, #008a99, #00a06f, #4eaf26);
 let theme3 =
   "linear-gradient(to right, #34527f, #006f9d, #008a99, #00a06f, #4eaf26)";
-// let theme1 = "#43d616",
-//   theme2 = "#d6d6d6",
-//   theme3 = "#d6d6d6";
-
 let themes = [theme1, theme2, theme3];
 
 //call numbers
-let number1 = document.getElementsByClassName("first")[0];
+let number1 = document.getElementsByClassName("first")[0]; //not used , always on
 let number2 = document.getElementsByClassName("second")[0];
 let number3 = document.getElementsByClassName("third")[0];
 let number4 = document.getElementsByClassName("fourth")[0];
@@ -40,33 +24,28 @@ let lines = [line1, line2, line3];
 let next = document.getElementsByClassName("next")[0];
 let prev = document.getElementsByClassName("prev")[0];
 
+//current step of the progress bar
 let currentStep = 0;
-// let currentStep = 0;
 
-//function of next button
-
-//function of next button
-// document.body.style.backgroundColor = "red";
+//function to change background color when we call it
 function changeBackground(color) {
   document.body.style.background = color;
 }
+
+//function of next button
 let nextFunc = function () {
+  //make prev button active when we click next button
   prev.disabled = false;
-  //   for (let currentStep = 0; currentStep < numbers.length - 1; currentStep++) {
-  //   numbers[currentStep].style.backgroundColor = "#43d616";
-  //   numbers[currentStep].style.color = "white";
-  //   numbers[currentStep].style.border = " 4px solid #36cb09";
+  prev.style.backgroundColor = "red";
+
   numbers[currentStep].style.backgroundColor = "#43d616";
   numbers[currentStep].style.color = "white";
   numbers[currentStep].style.border = " 4px solid #36cb09";
   lines[currentStep].style.backgroundColor = "#43d616";
   lines[currentStep].style.transition = "all 0.5s ease";
 
+  //change background color when we click on next button
   changeBackground(themes[currentStep]);
-
-  //change background color
-
-  prev.style.backgroundColor = "red";
 
   currentStep++;
   currentStep = currentStep;
