@@ -23,13 +23,16 @@ body {
   -webkit-transition: background-color 5000ms linear;
   -ms-transition: background-color 5000ms linear;
   transition: background-color 5000ms linear;
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
 }
 
 .container {
   max-width: 800px;
   margin: 20% auto;
   background: #fff;
-  border-radius: 5px;
+  border-radius: 20px;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
   padding: 30px;
   position: relative;
@@ -122,4 +125,22 @@ body {
   border-radius: 5px;
   border: none;
   cursor: pointer;
+}
+
+/* make animation */
+/* @keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+} */
+
+/* responsive */
+
+@media (max-width: 768px) {
+  .container {
+    margin: 70% auto;
+  }
 }
