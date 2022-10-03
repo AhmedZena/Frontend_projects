@@ -61,33 +61,28 @@ let nextFunc = function () {
   }
 };
 
+//prev button function
+
 let prevFunc = function () {
+  //make next button active when we click prev button
   next.style.backgroundColor = "#43d616";
   next.disabled = false;
-  //   for (let currentStep = currentStep; currentStep >= 0; currentStep--) {
-  console.log(currentStep);
+  // decrease current step to go to the prev step
   currentStep--;
   numbers[currentStep].style.backgroundColor = "#fff";
   numbers[currentStep].style.color = "black";
   numbers[currentStep].style.border = " 4px solid #c3c5c7";
   lines[currentStep].style.backgroundColor = "#c3c5c7";
 
+  //change background color when we click on prev button
   changeBackground(themes[currentStep - 1]);
 
-  //   currentStep = currentStep;
-  console.log(currentStep);
-  //   if (currentStep == 0) {
-  //       prev.style.backgroundColor = "#c3c5c7";
-  //     }
-  // break;
-
-  //disable prev button
+  //disable prev button when we reach first step and reset background color
   if (currentStep == 0) {
     prev.style.backgroundColor = "#c3c5c7";
     prev.disabled = true;
 
-    // linear-gradient(to right, #020c1b, #001d2a, #002a2b, #00371c, #2c3f01);
-
+    //return background color to the first shape
     document.body.style.background =
       " linear-gradient(to right,#020c1b, #001d2a, #002a2b, #00371c, #2c3f01)";
   }
