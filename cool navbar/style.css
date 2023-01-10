@@ -1,0 +1,36 @@
+nav {
+  background-color: #333; /* Set a dark background color */
+  font-size: 16px; /* Increase the font size */
+  color: white; /* Make the text white */
+}
+
+nav ul {
+  list-style: none; /* Remove the default list style */
+  margin: 0; /* Remove the default margin */
+  padding: 0; /* Remove the default padding */
+  overflow: hidden; /* Hide any overflowing list items */
+}
+
+nav li {
+  float: left; /* Change the list items to float horizontally */
+}
+
+nav a {
+  display: block; /* Make the links block-level elements */
+  padding: 15px; /* Add some padding to the links */
+  text-decoration: none; /* Remove the default text decoration */
+  color: white; /* Make the text white */
+}
+
+nav {
+  /* Add other styles here */
+  border-bottom: 2px solid #ccc; /* Add a bottom border */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a drop shadow */
+  transition: all 0.3s; /* Add a transition effect */
+}
+
+/* Add hover styles for the links */
+nav a:hover {
+  background-color: #555; /* Darken the background color on hover */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* Make the drop shadow stronger on hover */
+}
